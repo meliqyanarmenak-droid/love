@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>С 8 Марта, Дашечка</title>
+  <link rel="stylesheet" href="project/style.css">
+  <style>
+    .hero-ornament {
+      font-family: var(--font-title);
+      font-size: 0.65rem;
+      letter-spacing: 0.6em;
+      color: var(--gold);
+      opacity: 0;
+      animation: fadeIn 1s ease 3.5s forwards;
+      margin-top: 48px;
+    }
+
+    .rose-icon {
+      font-size: 1.8rem;
+      opacity: 0;
+      animation: fadeIn 1.2s ease 1.2s forwards;
+      display: block;
+      margin-bottom: 16px;
+      filter: drop-shadow(0 0 12px rgba(59,10,10,0.9));
+    }
+
+    .hero-love {
+      font-family: var(--font-body);
+      font-size: clamp(1.1rem, 3vw, 1.7rem);
+      font-style: italic;
+      color: var(--silver);
+      opacity: 0;
+      animation: fadeUp 1s ease 1.8s forwards;
+      letter-spacing: 0.05em;
+      margin-top: -10px;
+      margin-bottom: 8px;
+    }
+
+    .heart-pulse {
+      display: inline-block;
+      color: #8b2020;
+      animation: heartbeat 2.2s ease-in-out 2.5s infinite;
+      font-style: normal;
+    }
+  </style>
+</head>
+<body>
+
+<canvas id="petals-canvas"></canvas>
+<div id="page-transition"><div class="portal-ring"></div></div>
+
+<nav>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Главная</a></li>
+    <li><a href="project/gallery.html" data-transition="project/gallery.html">Фотографии</a></li>
+    <li><a href="project/reasons.html" data-transition="project/reasons.html">Почему я тебя люблю</a></li>
+    <li><a href="project/letter.html" data-transition="project/letter.html">Письмо</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-mist"></div>
+
+  <div class="hero-content">
+    <p class="hero-date">✦ &nbsp; 8 Марта &nbsp; ✦</p>
+
+    <span class="rose-icon">🌹</span>
+
+    <h1 class="hero-title">С 8 марта,<br>Дашечка моя</h1>
+
+    <p class="hero-love">
+      Я люблю тебя <em class="heart-pulse">♥</em>
+    </p>
+
+    <span class="ornament" style="opacity:0;animation:fadeIn 1s ease 2.2s forwards">❧ ✦ ❧</span>
+
+    <button class="hero-btn" data-transition="project/gallery.html">
+      Открыть
+    </button>
+
+    <p class="hero-ornament">✦ &nbsp; &nbsp; &nbsp; ✦</p>
+  </div>
+
+  <div class="scroll-hint">
+    <span>На фоне типо лепестки роз если что</span>
+  </div>
+</section>
+
+<script src="project/script.js"></script>
+</body>
+</html>

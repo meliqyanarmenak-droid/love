@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Письмо — Дашечка</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .letter-bg {
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 70% at 50% 60%, rgba(59,10,10,0.12) 0%, transparent 65%),
+        radial-gradient(ellipse 30% 30% at 10% 10%, rgba(201,168,76,0.03) 0%, transparent 50%),
+        radial-gradient(ellipse 30% 30% at 90% 90%, rgba(201,168,76,0.03) 0%, transparent 50%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .letter-page { position: relative; z-index: 1; }
+
+    .letter-deco-top {
+      font-family: var(--font-title);
+      font-size: 0.6rem;
+      letter-spacing: 0.6em;
+      color: var(--gold);
+      opacity: 0.4;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .letter-paper {
+      font-size: 1.02rem;
+    }
+
+    .wax-decoration {
+      position: absolute;
+      bottom: -16px; left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .wax-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--accent2);
+      box-shadow: 0 0 8px var(--accent2);
+    }
+
+    .wax-line {
+      width: 40px; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+  </style>
+</head>
+<body>
+
+<canvas id="petals-canvas"></canvas>
+<div id="page-transition"><div class="portal-ring"></div></div>
+<div class="letter-bg"></div>
+
+<nav>
+  <ul class="nav-links">
+    <li><a href="../index.html" data-transition="../index.html">Главная</a></li>
+    <li><a href="gallery.html" data-transition="gallery.html">Фотографии</a></li>
+    <li><a href="reasons.html" data-transition="reasons.html">Почему я тебя люблю</a></li>
+    <li><a href="letter.html" class="active">Письмо</a></li>
+  </ul>
+</nav>
+
+<main class="letter-page">
+
+  <h1 class="letter-page-title">Письмо для тебя</h1>
+
+  <div class="letter-wrapper">
+    <p class="letter-deco-top">✦ &nbsp; Зайке &nbsp; ✦</p>
+
+    <div class="letter-paper gothic-frame">
+      <div class="letter-seal">🌹</div>
+
+      <div
+        id="letter-body"
+        class="letter-text"
+        data-text="Дашечка,
+Сегодня 8 марта, и я решил подарить тебе свое время.
+
+Ты невероятная.
+Ты делаешь этот мир красивее просто тем, что ты есть.
+Я понял, что для тебя я не пожалею этих 6 часов своей жизни, что пишу этот код.
+
+Ты моя жизнь и я рад что могу быть с тобой, видеть тебя, скоро, надеюсь, и в реальности тоже, общаться с тобой, любить тебя и получать любовь от тебя.
+Ты та, перед которой моя гордыня стихает, ты та, с кем моя злость утихает. Благодаря тебе я знаю, что в этом мире есть нечто великое - любовь.
+
+Спасибо тебе за то, что ты есть в моей жизни.
+
+С 8 марта.
+
+Я люблю тебя."
+      ></div>
+
+      <div class="letter-signature">— С любовью твоя мармеладка АХАХА ♥</div>
+
+      <p class="letter-flourish">✦ &nbsp; &nbsp; ✦ &nbsp; &nbsp; ✦</p>
+
+      <div class="wax-decoration">
+        <div class="wax-line"></div>
+        <div class="wax-dot"></div>
+        <div class="wax-line"></div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

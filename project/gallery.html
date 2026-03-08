@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Фотографии — Дашечка</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { padding-top: 0; }
+
+    .gallery-header {
+      text-align: center;
+      padding: 130px 20px 20px;
+      position: relative;
+    }
+
+    .gallery-header .page-title {
+      opacity: 0;
+      animation: fadeUp 1s ease 0.4s forwards;
+    }
+
+    .gallery-header .sub {
+      font-family: var(--font-title);
+      font-size: 0.7rem;
+      letter-spacing: 0.4em;
+      color: var(--gold);
+      text-transform: uppercase;
+      opacity: 0;
+      animation: fadeUp 0.8s ease 0.8s forwards;
+      margin-top: 16px;
+    }
+
+    .gallery-bg {
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 20% 30%, rgba(59,10,10,0.12) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 50% at 80% 70%, rgba(59,10,10,0.1) 0%, transparent 60%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .gallery-grid { position: relative; z-index: 1; }
+
+    .photo-slot {
+      box-shadow: 
+        0 8px 32px rgba(0,0,0,0.8),
+        0 0 0 1px rgba(107,26,26,0.4),
+        inset 0 0 0 1px rgba(255,255,255,0.03);
+    }
+
+    .photo-slot-placeholder {
+      width: 100%; height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .placeholder-rose {
+      font-size: 2rem;
+      opacity: 0.25;
+      filter: grayscale(1);
+    }
+
+    .placeholder-hint {
+      font-family: var(--font-title);
+      font-size: 0.55rem;
+      letter-spacing: 0.2em;
+      color: var(--dim);
+      text-transform: uppercase;
+      text-align: center;
+      padding: 0 16px;
+    }
+
+    .photo-wrapper:hover { filter: brightness(1.05); }
+    .photo-wrapper { transition: filter 0.3s ease; }
+  </style>
+</head>
+<body>
+
+<canvas id="petals-canvas"></canvas>
+<div id="page-transition"><div class="portal-ring"></div></div>
+<div class="gallery-bg"></div>
+
+<nav>
+  <ul class="nav-links">
+    <li><a href="../index.html" data-transition="../index.html">Главная</a></li>
+    <li><a href="gallery.html" class="active">Фотографии</a></li>
+    <li><a href="reasons.html" data-transition="reasons.html">Почему я тебя люблю</a></li>
+    <li><a href="letter.html" data-transition="letter.html">Письмо</a></li>
+  </ul>
+</nav>
+
+<header class="gallery-header">
+  <h1 class="page-title">Чуть-чуть похвалы</h1>
+  <p class="sub">✦ &nbsp; Для тебя &nbsp; ✦</p>
+</header>
+
+<div class="divider" style="margin: 20px 8vw; position: relative; z-index: 1;"></div>
+
+<section class="gallery-grid">
+
+  <div class="photo-item">
+    <div class="photo-wrapper gothic-frame">
+      <div class="photo-slot">
+        <div class="photo-slot-placeholder">
+          <img src="photo_1_2026-03-08_16-54-11.jpg" alt="улыбка">
+        </div>
+        <div class="photo-shadow"></div>
+      </div>
+    </div>
+    <p class="photo-caption">У тебя самая чудесная улыбка ♡´･ᴗ･`♡</p>
+  </div>
+
+  <div class="photo-item">
+    <div class="photo-wrapper gothic-frame">
+      <div class="photo-slot">
+        <div class="photo-slot-placeholder">
+          <img src="photo_2_2026-03-08_16-54-11.jpg" alt="глаза">
+        </div>
+        <div class="photo-shadow"></div>
+      </div>
+    </div>
+    <p class="photo-caption">У тебя безумно красивые глаза (*´˘`*)♡</p>
+  </div>
+
+  <div class="photo-item">
+    <div class="photo-wrapper gothic-frame">
+      <div class="photo-slot">
+        <div class="photo-slot-placeholder">
+          <img src="photo_3_2026-03-08_16-54-11.jpg" alt="образ">
+        </div>
+        <div class="photo-shadow"></div>
+      </div>
+    </div>
+    <p class="photo-caption">у тебя нереально кайфовый образ (*´︶`*)ฅ♡</p>
+  </div>
+
+  <div class="photo-item">
+    <div class="photo-wrapper gothic-frame">
+      <div class="photo-slot">
+        <div class="photo-slot-placeholder">
+          <img src="photo_4_2026-03-08_16-54-11.jpg" alt="фигура">
+        </div>
+        <div class="photo-shadow"></div>
+      </div>
+    </div>
+    <p class="photo-caption">а фгура... Почему ты на одной планете с обычными смертными?</p>
+  </div>
+
+  <div class="photo-item" style="justify-content: center !important; padding: 0 !important;">
+    <div class="photo-wrapper gothic-frame">
+      <div class="photo-slot">
+        <div class="photo-slot-placeholder">
+          <img src="photo_5_2026-03-08_16-54-11.jpg" alt="взгляд">
+        </div>
+        <div class="photo-shadow"></div>
+      </div>
+    </div>
+    <p class="photo-caption" style="margin-left: 32px;">с ума схожу от твоего взгляда ♥</p>
+  </div>
+
+</section>
+
+<div class="divider" style="margin: 20px 8vw; position: relative; z-index: 1;"></div>
+
+<div class="gallery-finale">
+  <p class="gallery-finale-text">
+    &ldquo; Ты лучшее, что случилось в моей жизни. &rdquo;
+  </p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

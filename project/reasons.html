@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Почему я тебя люблю — Дашечка</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .reasons-bg {
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 70% 60% at 50% 50%, rgba(59,10,10,0.1) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .reasons-hero, .reasons-grid, .reasons-footer { position: relative; z-index: 1; }
+
+    .gallery-header {
+      text-align: center;
+      padding: 130px 20px 20px;
+      position: relative;
+    }
+
+    .gallery-header .page-title {
+      opacity: 0;
+      animation: fadeUp 1s ease 0.4s forwards;
+    }
+
+    .gallery-header .sub {
+      font-family: var(--font-title);
+      font-size: 0.7rem;
+      letter-spacing: 0.4em;
+      color: var(--gold);
+      text-transform: uppercase;
+      opacity: 0;
+      animation: fadeUp 0.8s ease 0.8s forwards;
+      margin-top: 16px;
+    }
+
+    .reason-icon {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      display: block;
+      opacity: 0.5;
+    }
+
+    .reason-card:nth-child(3n+1) { transition-delay: 0ms; }
+    .reason-card:nth-child(3n+2) { transition-delay: 80ms; }
+    .reason-card:nth-child(3n+3) { transition-delay: 160ms; }
+
+    .reason-card:hover .reason-text { color: #fff; }
+  </style>
+</head>
+<body>
+
+<canvas id="petals-canvas"></canvas>
+<div id="page-transition"><div class="portal-ring"></div></div>
+<div class="reasons-bg"></div>
+
+<nav>
+  <ul class="nav-links">
+    <li><a href="../index.html" data-transition="../index.html">Главная</a></li>
+    <li><a href="gallery.html" data-transition="gallery.html">Фотографии</a></li>
+    <li><a href="reasons.html" class="active">Почему я тебя люблю</a></li>
+    <li><a href="letter.html" data-transition="letter.html">Письмо</a></li>
+  </ul>
+</nav>
+
+<header class="gallery-header">
+  <h1 class="page-title">Почему я тебя люблю</h1>
+  <p class="sub">✦ &nbsp; Позволь мне рассказать &nbsp; ✦</p>
+</header>
+
+<div class="divider" style="margin: 0 8vw 10px; position: relative; z-index: 1;"></div>
+
+<section class="reasons-grid">
+
+  <div class="reason-card">
+    <span class="reason-number">I</span>
+    <span class="reason-icon">✦</span>
+    <p class="reason-text">Больше всего я люблю твою душу. ты мне нравишься потому что это ты.</p>
+  </div>
+
+  <div class="reason-card">
+    <span class="reason-number">II</span>
+    <span class="reason-icon">🌹</span>
+    <p class="reason-text">Я люблю то, как ты вздыхаешь когда мы мило общаемся)</p>
+  </div>
+
+  <div class="reason-card">
+    <span class="reason-number">III</span>
+    <span class="reason-icon">✦</span>
+    <p class="reason-text">Я люблю твой голос. мне нравиться слушать тебя в разы больше чем любую музыку.</p>
+  </div>
+
+  <div class="reason-card">
+    <span class="reason-number">IV</span>
+    <span class="reason-icon">♥</span>
+    <p class="reason-text">Я люблю твой взгляд. как эти глаза смотрят иногда... сллов нет чтоб описать</p>
+  </div>
+
+  <div class="reason-card">
+    <span class="reason-number">V</span>
+    <span class="reason-icon">✦</span>
+    <p class="reason-text">У тебя просто охрененный стиль, ты безумно круто выглядишь всегда.</p>
+  </div>
+
+  <div class="reason-card">
+    <span class="reason-number">VI</span>
+    <span class="reason-icon">🌹</span>
+    <p class="reason-text">Ты делаешь мой мир живее, без тебя было бы в разы скучнее жить.</p>
+  </div>
+
+  <div class="reason-card">
+    <span class="reason-number">VII</span>
+    <span class="reason-icon">✦</span>
+    <p class="reason-text">Ты вдохновляешь меня, счастье, для тебя мне хочется стать еще лучше, что бы ты была счастлива</p>
+  </div>
+
+  <div class="reason-card">
+    <span class="reason-number">VIII</span>
+    <span class="reason-icon">♥</span>
+    <p class="reason-text">С тобой я могу быть собой, это многого стоит</p>
+  </div>
+
+  <div class="reason-card">
+    <span class="reason-number">IX</span>
+    <span class="reason-icon">✦</span>
+    <p class="reason-text">люблю, конечно и твое тело. тут ниче не кринж не придумал, просто знай что люблю ахах</p>
+  </div>
+
+  <div class="reason-card">
+    <span class="reason-number">X</span>
+    <span class="reason-icon">🌹</span>
+    <p class="reason-text">Ты самая лучшая, я благодарен каждый день, что ты есть в моей жизни.</p>
+  </div>
+
+</section>
+
+<div class="divider" style="margin: 20px 8vw; position: relative; z-index: 1;"></div>
+
+<div class="reasons-footer">
+  <p>И это только малая часть того,<br>почему ты для меня особенная.</p>
+  <span class="ornament" style="margin-top: 24px;">❧ ✦ ❧</span>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
